@@ -1,0 +1,46 @@
+.body-main {
+  position: relative;
+}
+
+.close-dialog {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  cursor: pointer;
+}
+
+.save-contact-form {
+  min-width: 150px;
+  width: 100%;
+  padding: 4%;
+}
+
+.save-contact-full-width {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.picker-filed {
+  position: relative;
+  margin-top: 13px;
+  app-country-picker {
+    width: 125px;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    z-index: 1;
+  }
+  input {
+    padding-left: 135px;
+    height: 30px;
+  }
+}
+
+.picker {
+  position: relative;
+  mat-label {
+    position: absolute;
+    top: -2px;
+    left: 0;
+  }
+}

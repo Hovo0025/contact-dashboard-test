@@ -1,0 +1,15 @@
+.mat-button,
+.mat-flat-button,
+.mat-stroked-button,
+.mat-raised-button {
+  border-radius: 41px !important;
+  min-width: 130px !important;
+  text-transform: none !important;
+  overflow: hidden;
+}
+
+// see button doc
+.mat-flat-button:disabled {
+  box-shadow: none !important;
+  color: #fff !important;
+}

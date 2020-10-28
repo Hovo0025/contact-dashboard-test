@@ -1,0 +1,94 @@
+.table-header-item {
+  color: var(--textColor) !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  border-bottom: 2px solid var(--textColor) !important;
+}
+
+.table-header-item,
+.table-column-item {
+  padding: 0 0 !important;
+}
+
+.table-column-item {
+  font-size: 15px !important;
+  color: var(--textColor) !important;
+  font-weight: 300 !important;
+}
+
+.mat-table,
+.mat-paginator {
+  background-color: inherit !important;
+}
+
+.table-mat-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+$tableXpadding: 7px;
+
+td:not(:last-child):not(:first-child),
+th:not(:last-child):not(:first-child) {
+  padding: 0 $tableXpadding;
+}
+
+td:first-child,
+th:first-child {
+  padding-right: $tableXpadding;
+}
+
+td:last-child,
+th:last-child {
+  padding-left: $tableXpadding;
+}
+
+button.mat-sort-header-button {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--primaryColor);
+}
+
+th {
+  background: #fff!important;
+}
+tr.el-row:hover {
+  background: rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+}
+
+tr.el-row:active {
+  background: #fbfbfb;
+}
+
+
+td, th {
+  vertical-align: middle;
+  text-align: start!important;
+}
+
+th.center, td.center {
+  text-align: center!important;
+}
+
+tr.mat-footer-row, tr.mat-row {
+  height: 43px!important;
+}

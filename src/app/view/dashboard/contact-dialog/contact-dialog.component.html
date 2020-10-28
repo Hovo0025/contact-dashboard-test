@@ -1,0 +1,52 @@
+<div class="body-main">
+  <span class="material-icons close-dialog" (click)="onCloseDialog()">close</span>
+  <div class="sub-header">
+    <div class="title">{{(editMode) ? 'Edit Contact' : 'Add Contact' }}</div>
+    <div class="right-side">
+      <button mat-flat-button
+              type="button"
+              [disabled]="saveContactForm.pristine || saveContactForm.invalid"
+              (click)="onSaveContact()"
+              color="primary">
+        {{(editMode) ? 'Edit' : 'Save' }}
+      </button>
+    </div>
+  </div>
+  <div class="body-content">
+    <form class="save-contact-form" [formGroup]="saveContactForm">
+      <div class="d-flex flex-column flex-sm-row">
+        <div class="left-side w-100 m-0 m-sm-4">
+          <mat-form-field class="save-contact-full-width">
+            <mat-label>Firs Name</mat-label>
+            <input matInput
+                   autocomplete="off"
+                   formControlName="firstName"
+                   [errorStateMatcher]="matcher"
+                   placeholder="First name">
+            <mat-error *ngIf="saveContactForm.get('firstName').hasError('required')">
+              First Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="save-contact-full-width">
+            <mat-label>Last name</mat-label>
+            <input matInput
+                   autocomplete="off"
+                   formControlName="lastName"
+                   [errorStateMatcher]="matcher"
+                   placeholder="Last name">
+            <mat-error *ngIf="saveContactForm.get('firstName').hasError('required')">
+              Last name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="save-contact-full-width">
+            <mat-label>Address</mat-label>
+            <input matInput
+                   autocomplete="off"
+                   formControlName="address"
+                   placeholder="Address">
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
